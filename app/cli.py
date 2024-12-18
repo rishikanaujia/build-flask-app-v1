@@ -2,8 +2,10 @@ from flask.cli import with_appcontext
 from gevent.pywsgi import WSGIServer
 import logging
 
+
 def register_cli_commands(app):
     """Register CLI commands."""
+
     @app.cli.command("runserver")
     @with_appcontext
     def runserver():
